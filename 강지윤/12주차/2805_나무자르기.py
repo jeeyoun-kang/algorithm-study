@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin .readline
-n,m = map(int, input().split())
+n,m = map(int, input().split()) #나무의 수와 가져가려는 나무의 길이
 
 trees = list(map(int, input().split()))
 
@@ -14,7 +14,7 @@ while left <= right:
         if tree >= mid:
             total += tree - mid
 
-    if total >= m:
+    if total >= m: #가져가려는 나무가 m보다 클때
         left = mid + 1
     else:
         right = mid - 1
